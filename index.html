@@ -127,6 +127,66 @@ img.w-100 {
     border-radius: 10px;
     text-transform: uppercase;
 } 
+.tp-btn-white::before, .tp-btn-white::after {
+    background: hsl(214, 96%, 55%);
+}
+.tp-main-menu ul li a::before {
+    position: absolute;
+    content: "";
+    bottom: 25px;
+    right: 0;
+    width: 0;
+    height: 0px;
+    background-color: var(--tp-theme-primary);
+    border-radius: 33px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.tp-main-menu ul li a::after {  
+    position: absolute;
+    content: "";
+    bottom: 25px;
+    right: 0;
+    width: 0;
+    height: 0px;
+    background-color: var(--tp-theme-primary);
+    border-radius: 33px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.gx-40 > .col-xl-6.col-lg-6 {
+    width: 33.3333333% !important;  
+}   
+.tp-blog-info > p {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;  
+    color: #858585;
+    margin-bottom: 15px;
+}
+.tp-blog-info .tp-blog-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #454545;
+}  
+.tp-blog-item {  
+    padding: 30px 0px;
+    display: flex;
+    border: none;  
+}
+.tp-blog-meta.d-flex.justify-content-between.mb-30 > img {
+    width: 100px !important;
+    height: 100px;
+} 
+@media(max-width: 920px){
+  .gx-40 > .col-xl-6.col-lg-6 {
+    width: 100% !important;  
+} 
+}  
 </style>
 <body>
    <!--[if lte IE 9]>
@@ -134,18 +194,19 @@ img.w-100 {
       <![endif]-->
 
    <!-- tp-header-area-start -->
-   <div class="ban" style=" background: whitesmoke;  
+   <div class="ban" style=" background: whitesmoke;   
    height: 35px;    
    width: 100%;   
-     z-index: 999;  "></div>
+     z-index: 999;  "><div style="position:absolute;background:hsl(214, 96%, 55%);right: 0;color: white;font-weight: bold;height: 36px;display: flex;justify-content: center;align-items: center;width: 100px;margin-right: 61px;">About Us</div></div>  
    <header class="d-none d-lg-block">
     <div style="margin: 0; 
     border-radius: 0px;" id="header-sticky" class="tp-header-area-two tp-header-bg header-transparent header-transparent-two">
        <div class="container-fluid">
           <div class="row align-items-center"> 
-             <div class="col-xxl-3 col-xl-3 col-lg-3">
-                <div class="tp-logo text-start">
-                   <div style="color:black;font-weight: 500;font-size: 25px;margin-left: 50px;">iGAS<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
+             <div class="col-xxl-3 col-xl-3 col-lg-3"> 
+                <div class="tp-logo text-start">  
+                   <div style="color: #3d3d3d; 
+                   font-weight: 700;font-size: 25px;margin-left: 50px;">iGAS.<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
                 </div>
              </div>
              <div class="col-xxl-5 col-xl-6 col-lg-6"> 
@@ -207,7 +268,8 @@ img.w-100 {
             <div class="col-md-6 col-6">
                <div class="tp-logo">
                   <a href="index.html"> 
-                     <div style="color:black;font-weight: 500;font-size: 25px;">iGAS<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
+                     <div style="color: #3d3d3d;  
+                     font-weight: 700;font-size: 25px;">iGAS.<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
 
                   </a>
                </div>
@@ -225,9 +287,10 @@ img.w-100 {
 
    <div class="tp-offcanvas-area">
       <div class="tpoffcanvas">
-         <div class="tpoffcanvas__logo"> 
-            <a href="index.html">
-               <div style="color:white;font-weight: 500;font-size: 25px;">iGAS<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
+         <div class="tpoffcanvas__logo">  
+            <a href="index.html"> 
+               <div style="    color: white; 
+               font-weight: 700;font-size: 25px;">iGAS.<span style="color:hsl(214, 96%, 55%)">USA</span></div> 
                  
             </a>
          </div>
@@ -342,10 +405,7 @@ img.w-100 {
                   <h5 class="tp-subtitle">iGas Usa</h5> 
                   <h2 class="tp-title">Products
                      <span class="tp-section-highlight">
-                        & Services  
-                        <svg width="266" height="12" viewBox="0 0 266 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0L266 12H0V0Z" fill="#FFDC60"></path>
-                     </svg>
+                        & Services
                   </span>
                   </h2>
                </div>
@@ -739,7 +799,7 @@ img.w-100 {
                   <div class="tp-country-sectiontitle-box text-center" style="z-index: 10;position:relative;margin: 100px 0px; "> 
                      <h5 class="tp-subtitle" style="color:white">Reclamation</h5>   
                      <h2 class="tp-title" style="color:white;margin-bottom:0px">iClaim<span style="font-size: 9px;  
-                        position:absolute; margin-left: -1px;margin-top:-5px">TM</span> &nbsp; –
+                        position:absolute; margin-left: -1px;margin-top:5px">TM</span> &nbsp; –
                         
                            Reclaim Our Future  
                         
@@ -766,13 +826,12 @@ img.w-100 {
                            <a href="#"> </a>
                         </div>
                         <div class="tp-blog-meta d-flex justify-content-between mb-30"> 
-                           <a class="tp-blog-meta-color" href="iclaim.html">iClaim</a>
-                           <img src="DisposalFee.png" style="width: 50px;" /> 
+                           <img src="Buy-Back.png" style="width: 50px;" />   
                         </div>
                         <div class="tp-blog-info">
                            <h3 class="tp-blog-title"><a href="iclaim.html">Refrigerant Compensation</a>
                            </h3>
-                           <p>iGas can purchase refrigerants of any condition as part of maintaining the lifecycle of refrigerants. We accept and compensate for any purity mixture of any refrigerants at no charge. Plus, we provide prepaid freight!</p>
+                           <p>iGas can purchase refrigerants of any condition as part of maintaining the lifecycle of refrigerants. We accept and compensate for any purity mixture of any refrigerants at no charge.</p> 
                         </div>
                      </div>
                   </div>
@@ -784,7 +843,6 @@ img.w-100 {
                            <a href="#"></a>
                         </div>
                         <div class="tp-blog-meta d-flex justify-content-between mb-30">
-                           <a class="tp-blog-meta-color" href="iclaim.html">iClaim</a>
                            <img src="Residential.png" style="width: 50px;" /> 
                             
                         </div>
@@ -802,19 +860,53 @@ img.w-100 {
                            <a href="#"></a>
                         </div>
                         <div class="tp-blog-meta d-flex justify-content-between mb-30">
-                           <a class="tp-blog-meta-color" href="iclaim.html">iClaim</a>
-                           <img src="Buy-Back.png" style="width: 50px;" />  
+                           <img src="Electronics.png" style="width: 50px;" />  
+
+                        </div>
+                        <div class="tp-blog-info">
+                           <h3 class="tp-blog-title"><a href="iclaim.html">Reclaim Interface Program</a></h3> 
+                           <p>An interactive experience allowing wholesalers to track, manage, and budget their reclamation through our iClaim™ online and mobile application – Coming Spring 2023!
+                              </p>
+                        </div>
+                     </div>
+                  </div>
+               </div> 
+               <div class="col-xl-6 col-lg-6">
+                  <div class="tp-blog-box mb-30 wow tpfadeRight animated" data-wow-duration=".7s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.6s;">
+                     <div class="tp-blog-item">
+                        <div class="tp-blog-img fix mb-35">
+                           <a href="#"></a>
+                        </div>
+                        <div class="tp-blog-meta d-flex justify-content-between mb-30">
+                           <img src="Reques.png" style="width: 50px;" />   
 
                         </div>
                         <div class="tp-blog-info">
                            <h3 class="tp-blog-title"><a href="iclaim.html">Reclaimed Refrigerant</a></h3>
                            <p>As supplies of virgin HFC refrigerant are reduced, the availability of reclaimed refrigerant to service existing equipment in future years is vital.
-                              iGas is recovering, reclaiming, and repurposing HFC, HCFC, and CFC gases to minimize waste, minimize virgin production, as well as separate mixed
-                               gases and remove contaminants to maximize the lifecycle of refrigerants.</p>
+                              </p>
                         </div>
                      </div>
                   </div>
                </div> 
+               <div class="col-xl-6 col-lg-6">
+                  <div class="tp-blog-box mb-30 wow tpfadeRight animated" data-wow-duration=".7s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.6s;">
+                     <div class="tp-blog-item">
+                        <div class="tp-blog-img fix mb-35">
+                           <a href="#"></a>
+                        </div>
+                        <div class="tp-blog-meta d-flex justify-content-between mb-30">
+                           <img src="Intermediate.png" style="width: 50px;" />  
+
+                        </div>  
+                        <div class="tp-blog-info">
+                           <h3 class="tp-blog-title"><a href="iclaim.html">Recovery Cylinder Testing</a></h3>
+                           <p>iClaim™ can hydro static test and certify recovery cylinders to ensure the safety iClaim™ can hydro static test and certify recovery cylinders ensuring safety and DOT compliance.
+                              </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>   
                <div class="col-xl-6 col-lg-6">
                   <div class="tp-blog-box mb-30 wow tpfadeLeft animated" data-wow-duration=".6s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s;">
                      <div class="tp-blog-item">
@@ -822,8 +914,7 @@ img.w-100 {
                            <a href="#"> </a>
                         </div>
                         <div class="tp-blog-meta d-flex justify-content-between mb-30">
-                           <a class="tp-blog-meta-color" href="iclaim.html">iClaim</a>   
-                           <img src="Residential.png" style="width: 50px;" /> 
+                           <img src="DisposalFee.png" style="width: 50px;" />  
 
                         </div>
                         <div class="tp-blog-info">
@@ -839,10 +930,10 @@ img.w-100 {
             
          </div>
       </div>
-      <div class="tp-fea-button-five" style="text-align: center;
+      <div class="tp-fea-button-five" style="text-align: center;  
       margin-top: -70px;
       margin-bottom: 90px;">  
-         <a class="tp-btn-sky" href="#contact">Contact Us</a>  
+         <a class="tp-btn-sky" style="color:white;background: hsl(214, 96%, 55%);" href="#contact">Contact Us</a>  
       </div>
       <!--testimonial-area-start --> 
       
@@ -1023,10 +1114,10 @@ img.w-100 {
     <div class="tp-footer-area black-bg pt-130 pb-30">
        <div class="container">
           <div class="row">
-             <div class="col-xl-3 col-lg-4 col-md-6">
+             <div class="col-xl-3 col-lg-4 col-md-6"> 
                 <div class="tp-footer-widget">
-                   <div class="tp-footer-widget__logo mb-30">
-                      <a href="index.html"><img src="igaslogo.png" alt=""></a>  
+                   <div class="tp-footer-widget__logo mb-30"> 
+                      <a href="index.html"><img src="whiteigaslogo.png" alt=""></a>  
                    </div>
                    <div class="tp-footer-widget__text mb-30">  
                       <p>Our mission is to develop innovative solutions that will have a positive effect on our company's work, business and the environment.</p>

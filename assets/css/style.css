@@ -15805,3 +15805,43 @@ blockquote cite::before {
   margin: 0px 6px;
 } 
 /*# sourceMappingURL=style.css.map */
+
+.productdetails__button {
+  width: 110%;
+} 
+.tp-main-menu ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  right: 0;
+  width: 0;
+  height: 0px;
+  background-color: var(--tp-theme-primary);
+  border-radius: 33px;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.tp-main-menu ul li a::after {  
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  right: 0;
+  width: 0;
+  height: 0px;
+  background-color: var(--tp-theme-primary);
+  border-radius: 33px;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+} 
+.tp-header-left ul li a .arrow-down {
+  color: hsl(214, 96%, 55%);  
+  font-size: 16px;
+  margin-left: 5px;
+}
+button.scroll-top.scroll-to-target.open {
+  background: hsl(214, 96%, 55%);
+}  
